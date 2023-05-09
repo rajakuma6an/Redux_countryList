@@ -1,11 +1,18 @@
 .Home_Page {
   background-color: #202c38;
   color: #d2dce2;
+  padding: 0px 5rem;
 }
 .dark_bg {
+  padding: 0px 5rem;
   background-color: #2b3944;
   color: #d2dce2;
 }
+/* .section_search{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
 
 /* .light_bg {
   background-color: #d2dce2;
@@ -26,7 +33,7 @@
   background-color: #2b3944;
   color: #d2dce2;
   height: 50px;
-  width: 25rem;
+  width: 100%;
   padding-left: 70px;
   caret-color: #84929d;
   border: none;
@@ -40,20 +47,33 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .card_image {
-  width: 270px;
+  width: 100%;
   height: 200px;
 }
 
 .card_body {
-  padding: 20px;
+  padding: 15px;
+  height: 160px;
 }
 
 .Country_drop {
   background: #2b3944;
   color: #d2dce2;
   height: 50px;
-  width: 17rem;
+  width: 100%;
   border: none;
   outline: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 600px) {
+  .dark_bg {
+    padding: 15px;
+  }
+  .Home_Page {
+    padding: 20px;
+  }
+  .search_icon {
+    left: 15%;
+  }
 }

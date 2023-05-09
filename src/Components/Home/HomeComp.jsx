@@ -28,41 +28,48 @@ const HomeComp = () => {
   };
 
   return (
-    <div className={"Home_Page"}>
+    <div className={""}>
       <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <div className="container">
-        <div className="d-flex align-items-center justify-content-between py-5">
-          <SearchBar query={query} setQuery={setQuery} />
-          <DropDown
-            selectedRegion={selectedRegion}
-            setSelectedRegion={setSelectedRegion}
-          />
+      <div className="Home_Page">
+        <div className="row align-items-center justify-content-between py-3">
+          <div className={window.innerWidth > 600 ? "col-4" : "col-6"}>
+            <SearchBar query={query} setQuery={setQuery} />
+          </div>
+          <div className={window.innerWidth > 600 ? "col-3" : "col-6"}>
+            {" "}
+            <DropDown
+              selectedRegion={selectedRegion}
+              setSelectedRegion={setSelectedRegion}
+            />
+          </div>
         </div>
-        <div className="d-flex flex-wrap gap-1 align-items-center justify-content-between py-5">
-          {countries
-            .filter(
-              (country) =>
-                selectedRegion === "" || country.region === selectedRegion
-            )
-            .filter((country) =>
-              country.name.common.toLowerCase().includes(query.toLowerCase())
-            )
-            ?.map((country, i) => (
-              <div key={i} className="">
-                <div className="Card_Country">
-                  <img className="card_image" src={country?.flags?.png} />
-                  <div className="card_body">
-                    <p>{country?.name?.common}</p>
-                    <span>Population : {country?.population}</span>
-                    <br />
-                    <span>Region : {country?.region}</span>
-                    <br />
-                    <span>Capital : {country?.capital}</span>
-                    <br />
+        <div className="">
+          <div className="row">
+            {countries
+              .filter(
+                (country) =>
+                  selectedRegion === "" || country.region === selectedRegion
+              )
+              .filter((country) =>
+                country.name.common.toLowerCase().includes(query.toLowerCase())
+              )
+              ?.map((country, i) => (
+                <div key={i} className="col-12 col-lg-3 col-md-12 py-3">
+                  <div className="Card_Country">
+                    <img className="card_image" src={country?.flags?.png} />
+                    <div className="card_body">
+                      <p>{country?.name?.common}</p>
+                      <span>Population : {country?.population}</span>
+                      <br />
+                      <span>Region : {country?.region}</span>
+                      <br />
+                      <span>Capital : {country?.capital}</span>
+                      <br />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
       </div>
     </div>

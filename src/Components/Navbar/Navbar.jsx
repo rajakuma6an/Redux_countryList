@@ -6,7 +6,7 @@ import "../style.css";
 const Navbar = () => {
   return (
     <nav className={"dark_bg"}>
-      <div className="container py-3 d-flex align-items-center justify-content-between">
+      <div className=" py-3 d-flex align-items-center justify-content-between">
         <Link to="/" className="navbar-brand">
           Where in the world?
         </Link>
