@@ -4,6 +4,9 @@ import "../style.css";
 
 const DropDown = ({ selectedRegion, setSelectedRegion }) => {
   const Regions = useSelector((state) => state.countries.map((x) => x.region));
+  const NewRegions = Regions.filter((item,
+    index) => Regions.indexOf(item) === index);
+
   const handleChange = (event) => {
     setSelectedRegion(event.target.value);
   };
@@ -18,7 +21,7 @@ const DropDown = ({ selectedRegion, setSelectedRegion }) => {
           onChange={handleChange}
         >
           <option value="">Filter by region</option>
-          {Regions?.map((region, i) => (
+          {NewRegions?.map((region, i) => (
             <option key={i} value={region}>
               {region}
             </option>
