@@ -1,0 +1,59 @@
+.Home_Page {
+  background-color: #202c38;
+  color: #d2dce2;
+}
+.dark_bg {
+  background-color: #2b3944;
+  color: #d2dce2;
+}
+
+/* .light_bg {
+  background-color: #d2dce2;
+  color: #2b3944;
+} */
+
+.Search_Box {
+  position: relative;
+}
+
+.search_icon {
+  position: absolute;
+  top: 24%;
+  left: 6%;
+}
+
+.search_input {
+  background-color: #2b3944;
+  color: #d2dce2;
+  height: 50px;
+  width: 25rem;
+  padding-left: 70px;
+  caret-color: #84929d;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.Card_Country {
+  background-color: #2b3944;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.card_image {
+  width: 270px;
+  height: 200px;
+}
+
+.card_body {
+  padding: 20px;
+}
+
+.Country_drop {
+  background: #2b3944;
+  color: #d2dce2;
+  height: 50px;
+  width: 17rem;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
